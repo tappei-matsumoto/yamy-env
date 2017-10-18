@@ -1,0 +1,85 @@
+# ----------------------------------------------------------------
+#  VisualBasic.NET用キーマップ
+
+# ----------------------------------------------------------------
+#  Depends
+#  reqire MDI.mayu
+
+# ----------------------------------------------------------------
+#  VisualBasic.Net Debug Mode
+keymap2 VisualBasicDotNetDebugMode : GlobalC-C
+# key n            =                  # ステップイン
+# key n            = F10               # ステップオーバー
+# key g            = C-F8               # カーソル行まで実行
+# key b            = F9                 # ブレークポイント設定／解除
+# key C-g          = lAlt r e           # 中断
+
+# ----------------------------------------------------------------
+#  VisualBasic.Net 2strok C-C
+keymap2 VisualBasicDotNetC-C : GlobalC-C
+ key C-c          = C-S-B              # ソリューションのリビルド
+ key C-r          = C-F5               # 実行
+ key C-d          = F5                 # デバッグ実行
+#&Prefix(VisualBasicDotNetDebugMode) # デバッグ実行（ついでにデバッグモードに変更）
+
+# ----------------------------------------------------------------
+#  VisualBasic.Net 2strok C-X
+keymap2 VisualBasicDotNetC-X : GlobalC-X
+ key s            = C-S-s              # 全て保存
+ key OpenBracket  = C-Home             # ファイルの先頭へ
+ key CloseBracket = C-End              # ファイルの末尾へ
+ key C-x          = C-k C-n            # 次のブックマーク
+ key C-FullStop   = C-k C-n            # 次のブックマーク
+ key C-Comma      = C-k C-p            # 前のブックマーク
+ key C-b          = M-v p              # ソリューションエクスプローラー
+ key k            = C-F4               # MDI-Windowの削除
+ key C-t          = A-e n t            # アウトライントグル
+
+# ----------------------------------------------------------------
+#  VisualBasic 2strok help
+keymap2 VisualBasicDotNetHelp
+ key _1 = &HelpMessage("ウィンドウ", \
+     "C-X 1   : イミディエイトウィンドウ\n" \
+     "C-X 2   : ウォッチウィンドウ\n" \
+     "C-X 3   : プロパティウィンドウ\n" \
+     "C-X 4   : ツールボックス\n" \
+     "C-X C-B : プロジェクトウィンドウ\n" \
+     "C-X ,   : 前のMDIウィンドウ\n" \
+     "C-X .   : 次のMDIウィンドウ\n" \
+     "C-X K   : MDIウィンドウの削除")
+ key _2 = &HelpMessage("マーキング・カーソル", \
+     "C-@     : ブックマークの設定・解除\n" \
+     "C-X C-X : 次のブックマークへ\n" \
+     "C-X C-, : 前のブックマークへ\n" \
+     "C-X C-. : 次のブックマークへ\n" \
+     "C-X C-J : 定義行へ移動\n" \
+     "C-X C-U : 元の行へ戻る")
+ key _3 = &HelpMessage("実行デバッグ", \
+     "C-X B   : ブレークポイントの設定・解除\n" \
+     "C-X R   : 実行\n" \
+     "C-X C-R : 完全コンパイル後に実行\n" \
+     "C-X C-N : ステップ実行\n" \
+     "C-X C-M : ステップ実行（関数内へ飛ばない）\n" \
+     "C-X G   : カーソル行まで実行\n" \
+     "C-X C-Q : 中断")
+
+# ----------------------------------------------------------------
+#  VisualBasic.Net
+keymap VisualBasicDotNet : Global
+ key C-s           = C-f                # 検索
+ key C-S-BackSlash = lAlt e r           # やりなおし
+ key C-AtMark      = C-k C-k            # ブックマーク設定／解除
+ key C-Comma       = C-S-Tab            # 前のタブ
+ key C-FullStop    = C-Tab              # 次のタブ
+ key C-t           = C-j                # dabbrev
+ key C-x           = &Prefix(VisualBasicDotNetC-X)
+ key C-c           = &Prefix(VisualBasicDotNetC-C)
+ key C-S-Slash     = &HelpMessage("KeyMap", \
+     " 1 : ウィンドウ \n" \
+     " 2 : マーキング・カーソル \n" \
+     " 3 : 実行・デバッグ" \
+     ) &Prefix(VisualBasicDotNetHelp)
+
+# ----------------------------------------------------------------
+#  Keymap Expectations
+window VBDotNet /devenv\.exe\:wndclass_desked_gsk/: VisualBasicDotNet
