@@ -27,15 +27,19 @@ keymap2 MDIEC-X : GlobalC-X
  key C-n = $xyzzy_new                     # xyzzy (new)
  key k   = A-w t c                        # Kill Tab
  key n   = A-f n d                        # New Tab
+ key c   = A-f n f                        # Clone Tab
 
 # ----------------------------------------------------------------
 #  Keymap for Explorer
 keymap KeymapMDIE : Global
- key C-Comma    = F3                      # 前のタブ
- key C-FullStop = F4                      # 次のタブ
- key C-r        = F5                      # reload
- key C-k = Esc                            # 操作ミスで削除してしまわないように
+ key C-Comma     = F3                     # 前のタブ
+ key C-FullStop  = F4                     # 次のタブ
+ Key C-d         = S-Delete               # 削除（ゴミ箱不要）
+ key C-r         = F5                     # reload
+ key C-k         = Esc                    # 操作ミスで削除してしまわないように
  key C-BackSlash = Esc                    # 間違えて押すとえらいことになるからキライ
+ key C-A-h       = &ShellExecute("open", "C:\\users\\999000_102192\\bin\\mdie\\MDIE.exe", "\"C:\\users\\999000_102192\"", "\"C:\\users\\999000_102192\"", ShowNormal) # ホームディレクトリを開く
+ key C-A-c       = &ShellExecute("open", "C:\\users\\999000_102192\\bin\\mdie\\MDIE.exe", "\"C:\\users\\999000_102192\\work\"", "\"C:\\users\\999000_102192\\work\"", ShowNormal) # Workディレクトリを開く
  key C-x = &Prefix(MDIEC-X)               # 2ストロークC-X
  key C-c = &Prefix(MDIEC-C)               # 2ストロークC-C
 

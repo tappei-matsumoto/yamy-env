@@ -37,7 +37,7 @@
 # C-@ : Mark Set
 # S-Space : input toggle (Kanji)
 # C-x [   : page top
-# C-x ]   : page mottom
+# C-x ]   : page bottom
 # C-x n   : new buffer (tab pane)
 # C-x k   : close buffer (tab pane)
 # C-x C-s : save
@@ -50,7 +50,6 @@
 # C-S-[pnfbae] : mouse move
 #
 # [Develop]
-#
 # C-c C-c : Compile
 # C-c C-r : Run
 # C-c C-d : Debug
@@ -63,8 +62,6 @@
 #  Keyboard Setting
 include "109.mayu"                     # 109keyboard
 include "Dvorak.mayu"                  # dvorak on 109
-#include "mp-xp7310.mayu"               # 
-#include "ToshibaDynabook.mayu"         # 
 
 # ----------------------------------------------------------------
 #  Keysequence Definition
@@ -94,9 +91,16 @@ include "Eclips.mayu"                  # Eclips Keymap
 include "InternetExplorer.mayu"        # Internet Exproler Keymap
 include "NetBeans.mayu"                # NetBeans Keymap
 include "OSqlEdit.mayu"                # OSqlEdit Keymap
-include "VB.NET.mayu"                  # Visual Basic .Net
-include "SQLQA.mayu"                   # SQL Query Analyzer
-include "MDIE.mayu"                    # MDIE
+include "OSqlGrid.mayu"                # OSqlGrid Keymap
+include "SQLQA.mayu"                   # SQL Query Analyzer Keymap
+include "MDIE.mayu"                    # MDIE Keymap
+include "SQLSMSE.mayu"                 # Microsoft SQL Server Management Studio Express Keymap
+include "VisualStudio.mayu"            # Microsoft Visual Studio 2005/2008 Keymap
+include "FreeMind.mayu"                # FreMind Keymap
+include "console2.mayu"                # Console2 Keymap
+include "PPCW.mayu"                    # PPCW Keymap
+include "tablacus.mayu"                # Tablacus Keymap
+include "vscode.mayu"                  # VSCode Keymap
 
 # ----------------------------------------------------------------
 #  Keymap Expectations
