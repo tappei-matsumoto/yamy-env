@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------
-#  NetBeans Keymap
+#  NetBeans6.1 Keymap
 # ----------------------------------------------------------------
 #  Dependence
 #   - Global    : defined Global.mayu
@@ -89,4 +89,4 @@ keymap KeymapNetBeans : Global
 
 # ----------------------------------------------------------------
 #  Keymap Expectations
-window NetBeans /runide\.exe/ : KeymapNetBeans # NetBenas
+window NetBeans (/java\.exe/ && /NetBeans IDE/) : KeymapNetBeans # NetBenas

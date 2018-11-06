@@ -27,6 +27,8 @@ keymap2 ExcelC-X : MS-OfficeC-X
  key C-n = LAlt o h r             # シート名の変更
  key C-z = LAlt v z               # ズーム
  key C-c = LAlt f x               # 終了
+ key C-S-Semicolon = LAlt d g s   # 展開
+ key C-HyphenMinus = LAlt d g h   # 折りたたみ
 
 # ----------------------------------------------------------------
 #  Mulitple Stroke Marking
